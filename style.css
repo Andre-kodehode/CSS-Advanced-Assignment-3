@@ -1,0 +1,82 @@
+/* Default settings */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+/* Nav styling */
+
+nav {
+  background-color: #333;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  background-color: #333;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+/* Style for all links inside the nav */
+nav a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+nav a:hover {
+  background-color: #555;
+}
+
+/* Active link style (optional class to apply in JS) */
+nav a.active {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Add spacing between div and section from header.*/
+section {
+  padding: 50px 0;
+}
+
+div {
+  margin: 25px 0;
+}
+
+/* Button styling hover*/
+button {
+  padding: 10px 20px;
+  background-color: #8f4c30;
+  color: #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #695528;
+  transform: scale(1.15);
+  font-weight: bold;
+}

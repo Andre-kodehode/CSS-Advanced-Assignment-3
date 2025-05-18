@@ -1,0 +1,174 @@
+/* Background for nyancat */
+.nyancatBackground {
+  position: relative;
+  background: url(./images/NyancatBackground.gif);
+  width: 100%;
+  height: 250px;
+}
+
+/* Nyancat section animation & styling*/
+
+.nyancat {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: fly-across 4s linear infinite;
+  z-index: 9;
+}
+
+.nyancat:hover {
+  transform: scale(1.2) translateY(-50%);
+  transition: ease-out;
+}
+
+/* Animation frames */
+
+@keyframes fly-across {
+  0% {
+    left: -500px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes wavy {
+  0% {
+    margin-top: -54px;
+  }
+  100% {
+    margin-top: -60px;
+  }
+}
+
+/* End of animation frames */
+.rainbow {
+  background: none;
+  height: 102px;
+  width: 25%;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+
+  z-index: 0;
+}
+
+.hot:after,
+.hot:before,
+.cold:after,
+.cold:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 50%;
+}
+.hot:after,
+.hot:before {
+  top: 0;
+}
+.cold:after,
+.cold:before {
+  bottom: 0;
+}
+
+.wave-a {
+  margin-top: -54px;
+  animation: wavy 700ms steps(2) infinite both, fly-across 4s linear infinite;
+}
+
+.wave-b {
+  margin-top: -60px;
+  animation: wavy 700ms 350ms steps(2) infinite both,
+    fly-across 4s linear infinite;
+}
+
+/* red */
+.hot {
+  background-image: linear-gradient(
+    to right,
+    #f00 49px,
+    transparent 49px,
+    transparent 92px
+  );
+}
+/* orange */
+.hot:after {
+  background-image: linear-gradient(
+    to right,
+    #f90 49px,
+    transparent 49px,
+    transparent 92px
+  );
+}
+/* yellow */
+.hot:before {
+  background-image: linear-gradient(
+    to right,
+    #ff0 49px,
+    transparent 49px,
+    transparent 92px
+  );
+}
+/* green */
+.cold:after {
+  background-image: linear-gradient(
+    to right,
+    #3f0 49px,
+    transparent 49px,
+    transparent 92px
+  );
+  background-position: left top;
+}
+/* blue */
+.cold:before {
+  background-image: linear-gradient(
+    to right,
+    #09f 49px,
+    transparent 49px,
+    transparent 92px
+  );
+}
+/* purple */
+.cold {
+  background-image: linear-gradient(
+    to right,
+    #63f 49px,
+    transparent 49px,
+    transparent 92px
+  );
+}
+.rainbow,
+.hot:after,
+.hot:before,
+.cold:after,
+.cold:before {
+  background-size: 95px 17px;
+  background-repeat: repeat-x;
+}
+.wave-a.hot,
+.wave-a.cold:after {
+  background-position: left top;
+}
+.wave-a.hot:after,
+.wave-a.cold:before {
+  background-position: left center;
+}
+.wave-a.hot:before,
+.wave-a.cold {
+  background-position: left bottom;
+}
+.wave-b.hot,
+.wave-b.cold:after {
+  background-position: 46px top;
+}
+.wave-b.hot:after,
+.wave-b.cold:before {
+  background-position: 46px center;
+}
+.wave-b.hot:before,
+.wave-b.cold {
+  background-position: 46px bottom;
+}
